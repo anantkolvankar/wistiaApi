@@ -11,19 +11,30 @@ import wsapi.Project;
 ```
 Configure your <a href="http://wistia.com/doc/data-api#getting_started">API password</a>
 ```
-ApiUtil.API_PASSWORD="your-api-password-here";
+ApiUtil.API_PASSWORD = "your-api-password-here";
 ```
 ### Examples
 
 List all Projects in your account:
 ```
-JSONArray allProjects=Project.getAll();
+JSONArray allProjects = Project.getAll();
 ```
 Get project based on hashedId
 ```
 JSONObject project = Project.getByHashedId("your-project-hashed-id");
 //getting project name
 System.out.println(project.getString("name"));
+```
+
+List all Medias in your account:
+```
+JSONArray allMedias = Media.getAll();
+```
+Get media based on hashedId
+```
+JSONObject media = Media.getByHashedId("your-media-hashed-id");
+//getting media name
+System.out.println(media.getString("name"));
 ```
 ### WistiaApi Client Example java application
 
